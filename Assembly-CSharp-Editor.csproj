@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A1A2E9CB-F817-98A3-1164-EB41ACAAF2C7}</ProjectGuid>
+    <ProjectGuid>{B8C447CE-7A63-1813-4781-032B8D0B3DB0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -755,6 +755,9 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="OpenAI.Runtime">
+      <HintPath>Library/ScriptAssemblies/OpenAI.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
@@ -791,6 +794,9 @@
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
+    <Reference Include="OpenAI.Editor">
+      <HintPath>Library/ScriptAssemblies/OpenAI.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
@@ -818,24 +824,18 @@
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="OpenAI.Runtime">
-      <HintPath>Library/ScriptAssemblies/OpenAI.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenAI.Editor">
-      <HintPath>Library/ScriptAssemblies/OpenAI.Editor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{DC355C6C-ED6B-A219-EC16-CFC9B758DF57}</Project>
+      <Project>{59886B33-AEF2-7D67-0E37-EE36B3DA7B57}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{5CA389F7-E4A1-62EA-647F-738C9D6DF872}</Project>
+      <Project>{6E8E04CA-5BB0-39A5-9A35-BCDD3E9E3680}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{793ABA70-B0B6-DC8E-F5B4-8FF4C0B68681}</Project>
+      <Project>{F6A6042C-C36F-9690-D2DA-3AA58B995308}</Project>
       <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

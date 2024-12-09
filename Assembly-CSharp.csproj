@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5CA389F7-E4A1-62EA-647F-738C9D6DF872}</ProjectGuid>
+    <ProjectGuid>{6E8E04CA-5BB0-39A5-9A35-BCDD3E9E3680}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,18 +57,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/Reporter.cs" />
+    <Compile Include="Assets/Scripts/TTSManager.cs" />
     <Compile Include="Assets/TMapManager.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/Test/TestReporter.cs" />
+    <Compile Include="Assets/Scripts/STTManager.cs" />
+    <Compile Include="Assets/Scripts/ChatGPT.cs" />
+    <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/ReporterGUI.cs" />
+    <Compile Include="Assets/Scripts/StoryManager.cs" />
+    <Compile Include="Assets/Scripts/wavUtility.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/MultiKeyDictionary.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/ReporterMessageReceiver.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/Test/Rotate.cs" />
-    <Compile Include="Assets/Scripts/ChatGPT.cs" />
-    <Compile Include="Assets/Scripts/STTManager.cs" />
-    <Compile Include="Assets/Scripts/TTSManager.cs" />
-    <Compile Include="Assets/Scripts/wavUtility.cs" />
-    <Compile Include="Assets/Scripts/StoryManager.cs" />
-    <Compile Include="Assets/Scripts/GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -733,6 +733,9 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="OpenAI.Runtime">
+      <HintPath>Library/ScriptAssemblies/OpenAI.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
@@ -769,6 +772,9 @@
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
+    <Reference Include="OpenAI.Editor">
+      <HintPath>Library/ScriptAssemblies/OpenAI.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
@@ -796,16 +802,10 @@
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="OpenAI.Runtime">
-      <HintPath>Library/ScriptAssemblies/OpenAI.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenAI.Editor">
-      <HintPath>Library/ScriptAssemblies/OpenAI.Editor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{DC355C6C-ED6B-A219-EC16-CFC9B758DF57}</Project>
+      <Project>{59886B33-AEF2-7D67-0E37-EE36B3DA7B57}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
