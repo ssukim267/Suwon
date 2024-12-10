@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/jieun.unity
+    path: Assets/Scenes/jieun_tmap.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/jisoo_story.unity
     guid: adf12749d1cd44a8098b488d4841f5b1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/jisoo_ai.unity
     guid: f4dbae4e3582e49b4a5985f47ec62d36
   m_configObjects: {}
