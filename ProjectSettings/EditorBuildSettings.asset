@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/jisoo_ai.unity
     guid: f4dbae4e3582e49b4a5985f47ec62d36
-  m_configObjects: {}
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: b5f9cad11f740b642a52ffbf11505868, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: c3448e196508ea947993b438f1ccb9be, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: bd11aa2ff9e0e1b49b08d63838e63b47, type: 2}
