@@ -42,7 +42,7 @@ public class NaverTTS : MonoBehaviour
         request.Headers.Add("X-NCP-APIGW-API-KEY", "Zl4XoGWezU3GAWUB9D9dE8mtbjS0q00mBEkIUqto");
         request.Method = "POST";
         //Debug.Log(text);
-        byte[] byteDataParams = Encoding.UTF8.GetBytes("speaker=nwontak&volume=0&speed=0&pitch=0&format=mp3&text=" + text);
+        byte[] byteDataParams = Encoding.UTF8.GetBytes("speaker=nmeow&volume=0&speed=0&pitch=0&format=mp3&text=" + text);
         request.ContentType = "application/x-www-form-urlencoded";
         request.ContentLength = byteDataParams.Length;
         
