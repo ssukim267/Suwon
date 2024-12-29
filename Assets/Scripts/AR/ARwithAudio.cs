@@ -125,6 +125,9 @@ public class ARwithAudio : MonoBehaviour
         }
     }
 
+    // 이미 재생된 이미지 이름을 추적하기 위한 HashSet
+    private HashSet<string> playedAudioSet = new HashSet<string>();
+
     private void ImageChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
         foreach (ARTrackedImage trackedImage in eventArgs.added)
@@ -132,11 +135,13 @@ public class ARwithAudio : MonoBehaviour
             if (trackedImage != null)
             {
                 UpdateImage(trackedImage);
-                PlayAudio(trackedImage.referenceImage.name); // 이미지에 해당하는 음원 재생
-            }
-            else
-            {
-                Debug.LogWarning("Null trackedImage in added event.");
+
+                // 처음 인식된 경우에만 재생
+                if (!playedAudioSet.Contains(trackedImage.referenceImage.name))
+                {
+                    PlayAudio(trackedImage.referenceImage.name);
+                    playedAudioSet.Add(trackedImage.referenceImage.name);
+                }
             }
         }
 
@@ -145,11 +150,8 @@ public class ARwithAudio : MonoBehaviour
             if (trackedImage != null)
             {
                 UpdateImage(trackedImage);
-                PlayAudio(trackedImage.referenceImage.name);
-            }
-            else
-            {
-                Debug.LogWarning("Null trackedImage in updated event.");
+
+                // 업데이트 시에는 재생하지 않음
             }
         }
 
@@ -158,13 +160,13 @@ public class ARwithAudio : MonoBehaviour
             if (trackedImage != null)
             {
                 DisableImage(trackedImage);
-            }
-            else
-            {
-                Debug.LogWarning("Null trackedImage in removed event.");
+
+                // 제거 시 리스트에서 삭제 (재추적 시 다시 재생 가능)
+                playedAudioSet.Remove(trackedImage.referenceImage.name);
             }
         }
     }
+
 
     // 이미지에 해당하는 오브젝트의 위치와 회전을 업데이트하고 오브젝트 활성화
     private void UpdateImage(ARTrackedImage trackedImage)
@@ -258,7 +260,6 @@ public class ARwithAudio : MonoBehaviour
         { "woldo", 6 },
         { "hyeopdo", 7 },
         { "gwonbeop", 8 }
-        // 추가적으로 필요한 이미지와 음원 인덱스 매핑 추가 가능
     };
 
         // 이미지 이름이 딕셔너리에 있는지 확인하고, 있으면 해당 인덱스를 반환
