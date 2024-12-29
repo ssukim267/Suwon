@@ -1,4 +1,4 @@
-/* 현위치-->도착지 */
+/* 사용자 현위치-->도착지 */
 using System.Collections;
 using UnityEngine;
 
@@ -182,8 +182,6 @@ public class TMapManager : MonoBehaviour
 /* 출발지(하드코딩) --> 도착지(하드코딩) */
 
 /*
-// 성공
-
 using System.Collections;
 using UnityEngine;
 
